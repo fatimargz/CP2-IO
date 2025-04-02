@@ -31,28 +31,30 @@ Compression Factor is generally higher for mixed datatypes versus all floats. It
 
 2. Plot some histograms by calling back to the original hvector tutorial (you might want to use scp to move the plots from the AF to your local machine, just a thought 👀)
 
-okay. 
+**Answer**: okay. 
 
 <p align="center">
 	<figure>
-		<img src="IO/day1/vpx_distributions/vpx_1000000_-1000000_50.png" width="400">
+		<img src="IO/day1/vpx_distributions/vpx_1000000_-1000000_50.png" width="500">
 		<figcaption>10MBytes</figcaption>
 	</figure>
 	<figure>
-		<img src="IO/day1/vpx_distributions/vpx_1000000_-30000000_50.png" width="400">
+		<img src="IO/day1/vpx_distributions/vpx_1000000_-30000000_50.png" width="500">
 		<figcaption>30MBytes</figcaption>
 	</figure>
 	<figure>
-  		<img src="IO/day1/vpx_distributions/vpx_1000000_0_50.png" width="400">
+  		<img src="IO/day1/vpx_distributions/vpx_1000000_0_50.png" width="500">
 		<figcaption>autoflush disabled</figcaption>
 	</figure>
 	<figure>  
-		<img src="IO/day1/vpx_distributions/vpx_1000000_10000_50.png" width="400">
+		<img src="IO/day1/vpx_distributions/vpx_1000000_10000_50.png" width="500">
 		<figcaption>10000 entries</figcaption>
 	</figure>
 	<figure>
-  		<img src="IO/day1/vpx_distributions/vpx_1000000_100_50.png" width="400">
+  		<img src="IO/day1/vpx_distributions/vpx_1000000_100_50.png" width="500">
 		<figcaption>100 entries</figcaption>
 	</figure>
 </p>
+
+I used `IO/day1/hvector.C` to create these plots. 
 
