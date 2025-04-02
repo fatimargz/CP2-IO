@@ -17,10 +17,17 @@ Analysis: The CPU Time plot tells me that the by enabling autoflush, times go by
 The Real Time plot shows similar results.
 The Disk Mean plot significantly shows a difference between mixed datatypes versus floats. Int32 takes in 4 bytes and float64 takes in 8bytes, so I clearly see a reduced file size for each autoflush setting. 
 The NRMS plot is interesting... Would this mean that setting autoflush by number of entriesis better than by MBytes? 
+
 I also plotted the TTree Filesize: 
 ![Tfilesize](IO/day1/datatype_analysis_filesize.png)
 The size of the TTree also shows to be more efficient with mixed datatypes versus when they are all floats. 
+
 And finally, the TTree Compression Factor:
 ![TCF](IO/day1/datatype_analysis_compressfactor.png)
 Compression Factor is generally higher for mixed datatypes versus all floats. It's also interesting to see the compression factor to be lowest when autoflush is set to 100 entries, it is probably too low of a setting. 
+
+2. Plot some histograms by calling back to the original hvector tutorial (you might want to use scp to move the plots from the AF to your local machine, just a thought 👀)
+
+okay. 
+
 
