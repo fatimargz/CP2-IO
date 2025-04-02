@@ -33,7 +33,11 @@ Compression Factor is generally higher for mixed datatypes versus all floats. It
 
 okay. 
 
-![px10MBytes](IO/day1/vpx_distributions/vpx_1000000_-1000000_50.png)
-
-![px30MBytes](IO/day1/vpx_distributions/vpx_1000000_-3000000_50.png)
+<p align="center">
+  <img src="IO/day1/vpx_distributions/vpx_1000000_-1000000_50.png" width="200">
+  <img src="IO/day1/vpx_distributions/vpx_1000000_-30000000_50.png" width="200">
+  <img src="IO/day1/vpx_distributions/vpx_1000000_0_50.png" width="200">
+  <img src="IO/day1/vpx_distributions/vpx_1000000_10000_50.png" width="200">
+  <img src="IO/day1/vpx_distributions/vpx_1000000_100_50.png" width="200">
+</p>
 
