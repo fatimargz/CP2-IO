@@ -11,6 +11,7 @@ If we take a look at the code from Day 1, https://github.com/jahreda/c2-the-p2/t
 
 The following are the results from changing all variables, px, py, pz and vint to float types versus maintaining vint to integer type: 
 ![analysis](IO/day1/datatype_analysis.png)
+
 Hypothesis: I expect larger autoflush to increase efficiency in data usage and speed when writing the file.
 
 Analysis: The CPU Time plot tells me that the by enabling autoflush, times go by quicker. It's also slightly faster when I had `vint` set to an integer type rather than float type. I think integer operations are generally faster than floating-point operations. I do think its interesting that the type dont seem to matter when autoflush was set to 100 entries. It almost behaved as if it was disabled. 
@@ -20,14 +21,18 @@ The NRMS plot is interesting... Would this mean that setting autoflush by number
 
 I also plotted the TTree Filesize: 
 ![Tfilesize](IO/day1/datatype_analysis_filesize.png)
+
 The size of the TTree also shows to be more efficient with mixed datatypes versus when they are all floats. 
 
 And finally, the TTree Compression Factor:
 ![TCF](IO/day1/datatype_analysis_compressfactor.png)
+
 Compression Factor is generally higher for mixed datatypes versus all floats. It's also interesting to see the compression factor to be lowest when autoflush is set to 100 entries, it is probably too low of a setting. 
 
 2. Plot some histograms by calling back to the original hvector tutorial (you might want to use scp to move the plots from the AF to your local machine, just a thought 👀)
 
 okay. 
 
+![px](IO/day1/vpx_distributions/vpx_1000000_-1000000_50.png)
+![px](IO/day1/vpx_distributions/vpx_1000000_-3000000_50.png)
 
