@@ -7,5 +7,7 @@ If we take a look at the code from Day 1, https://github.com/jahreda/c2-the-p2/t
 1. How might mixing the baskets with different kinds of data affect compression of the data upon ﬁlling the tree and saving to ﬁle? Does this have an effect with the overall disk usage or CPU walltime?
 
 **Answer** 
+`IO/day1/Screenshots` contains two folders, `All_Floats` and `Mixed_Data_Types`. `All_Floats` contains screenshots of the five autoflush settings when the files were writted with the same datatypes. This was done by changing `vint` variable in `writeROOTFile.cpp` to a float type. `Mixed_Data_Types` contains screenshots of the five autoflush settings with `vint` set to integer type. Each folder also contains a `data.txt` file, where I manually saved the data from provided in the screenshot - later used in `data_types_analysis.ipynb`. 
 
-
+The following are the results from changing all variables, px, py, pz and vint to float types versus maintaining vint to integer type: 
+![analysis](IO/day1/datatype_analysis.png)
