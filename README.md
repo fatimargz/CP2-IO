@@ -34,10 +34,25 @@ Compression Factor is generally higher for mixed datatypes versus all floats. It
 okay. 
 
 <p align="center">
-  <img src="IO/day1/vpx_distributions/vpx_1000000_-1000000_50.png" width="200">
-  <img src="IO/day1/vpx_distributions/vpx_1000000_-30000000_50.png" width="200">
-  <img src="IO/day1/vpx_distributions/vpx_1000000_0_50.png" width="200">
-  <img src="IO/day1/vpx_distributions/vpx_1000000_10000_50.png" width="200">
-  <img src="IO/day1/vpx_distributions/vpx_1000000_100_50.png" width="200">
+	<figure>
+		<img src="IO/day1/vpx_distributions/vpx_1000000_-1000000_50.png" width="200">
+		<figcaption>10MBytes</figcaption>
+	</figure>
+	<figure>
+		<img src="IO/day1/vpx_distributions/vpx_1000000_-30000000_50.png" width="200">
+		<figcaption>30MBytes</figcaption>
+	</figure>
+	<figure>
+  		<img src="IO/day1/vpx_distributions/vpx_1000000_0_50.png" width="200">
+		<figcaption>autoflush disabled</figcaption>
+	</figure>
+	<figure>  
+		<img src="IO/day1/vpx_distributions/vpx_1000000_10000_50.png" width="200">
+		<figcaption>10000 entries</figcaption>
+	</figure>
+	<figure>
+  		<img src="IO/day1/vpx_distributions/vpx_1000000_100_50.png" width="200">
+		<figcaption>100 entries</figcaption>
+	</figure>
 </p>
 
