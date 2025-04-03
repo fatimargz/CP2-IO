@@ -6,7 +6,7 @@ If we take a look at the code from Day 1, https://github.com/jahreda/c2-the-p2/t
 
 1. How might mixing the baskets with different kinds of data affect compression of the data upon ﬁlling the tree and saving to ﬁle? Does this have an effect with the overall disk usage or CPU walltime?
 
-**Answer** 
+**Answer:** 
 `IO/day1/Screenshots` contains two folders, `All_Floats` and `Mixed_Data_Types`. `All_Floats` contains screenshots of the five autoflush settings when the files were writted with the same datatypes. This was done by changing `vint` variable in `writeROOTFile.cpp` to a float type. `Mixed_Data_Types` contains screenshots of the five autoflush settings with `vint` set to integer type. Each folder also contains a `data.txt` file, where I manually saved the data from provided in the screenshot - later used in `data_types_analysis.ipynb`. 
 
 The following are the results from changing all variables, px, py, pz and vint to float types versus maintaining vint to integer type: 
@@ -31,7 +31,7 @@ Compression Factor is generally higher for mixed datatypes versus all floats. It
 
 2. Plot some histograms by calling back to the original hvector tutorial (you might want to use scp to move the plots from the AF to your local machine, just a thought 👀)
 
-**Answer**: okay. 
+**Answer:** okay. 
 
 <p align="center">
 	<figure>
@@ -62,5 +62,10 @@ I used `IO/day1/hvector.C` to create these plots.
 factors according to the basket sizes.
 a. Do this ﬁrst with only random ﬂoating point numbers. After you get this, then you can ﬁll the branches with (½ easily-compressible and ½ difﬁcult-to-compress) numbers and see how that changes things.
 b. What do you notice with the smaller basket sizes? The larger ones?
-c. Do the benchmarks tell us anything useful? 
+c. Do the benchmarks tell us anything useful?
+
+**Answer:** `IO/day1/Screenshots/BasketSizes_Floats` contains screenshots of results generated using `writeROOTFile_baskets.cpp` and `readROOTFile_baskets.cpp`. The following are the results: 
+![basket_floats](IO/day1/baskets_floats.png)
+
+Based off looking at the TTree Compression Factor and the Compression Factor for branch `vpx`, for lower batch sizes, the compression is low and then plateaus at basketsize = 128kB. The Disk Mean relatively stays the same throughout basketsizes, but the NRMS changes alot - I'm not sure what to make from this. The real times and CPU times both immediately drop at basketsize = 8 kB, goes back up a bit I think at 64kB and then exponentially drops, similar to damping.  
 
