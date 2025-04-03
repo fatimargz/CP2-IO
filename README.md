@@ -56,5 +56,11 @@ Compression Factor is generally higher for mixed datatypes versus all floats. It
 	</figure>
 </p>
 
-I used `IO/day1/hvector.C` to create these plots. 
+I used `IO/day1/hvector.C` to create these plots.
+
+3. Once you have these, using tree->SetBasketSize(X), set the size of the basket buffer to values in this set: {4, 8, 16, 32, 64, 128, 256, 512, 1024} [kB] and take the corresponding compression factors of an individual branch (You can obtain this a couple ways, within the script or after the .root ﬁle is written) After this is written, plot the compression
+factors according to the basket sizes.
+a. Do this ﬁrst with only random ﬂoating point numbers. After you get this, then you can ﬁll the branches with (½ easily-compressible and ½ difﬁcult-to-compress) numbers and see how that changes things.
+b. What do you notice with the smaller basket sizes? The larger ones?
+c. Do the benchmarks tell us anything useful? 
 
