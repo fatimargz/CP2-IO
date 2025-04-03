@@ -67,5 +67,5 @@ c. Do the benchmarks tell us anything useful?
 **Answer:** `IO/day1/Screenshots/BasketSizes_Floats` contains screenshots of results generated using `writeROOTFile_baskets.cpp` and `readROOTFile_baskets.cpp`. The following are the results: 
 ![basket_floats](IO/day1/baskets_floats.png)
 
-Based off looking at the TTree Compression Factor and the Compression Factor for branch `vpx`, for lower batch sizes, the compression is low and then plateaus at basketsize = 128kB. The Disk Mean relatively stays the same throughout basketsizes, but the NRMS changes alot - I'm not sure what to make from this. The real times and CPU times both immediately drop at basketsize = 8 kB, goes back up a bit I think at 64kB and then exponentially drops, similar to damping.  
+Based off looking at the TTree Compression Factor and the Compression Factor for branch `vpx`, for lower batch sizes, the compression is low and then plateaus at basketsize = 128kB. The Disk Mean relatively stays the same throughout basketsizes, but the NRMS changes alot - I'm not sure what to make from this. The real times and CPU times both immediately drop at basketsize = 8 kB, goes back up a bit, I think at 64kB, and then exponentially drops, similar to damping.  
 
