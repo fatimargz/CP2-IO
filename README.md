@@ -74,4 +74,4 @@ f we take a look at the code from Day 2: https://github.com/jahreda/c2-the-p2/tr
 1. Of the decorations we were able to cover in class, can we get the ReadExampleElectron script to read back the decorations we set?
 2. Add a decoration of your own, call it decor_<your name> and make it your favorite data type(assuming it’s compatible with C++ and the athena framework), play around with writing and reading it! See what works and what might not.
 
-**Answer:** 
+**Answer:** I first edited 'IO/day2/WriteExampleElectron.h' to add my decorator, `decor_fatima` for integer types. Then I edited, 'IO/day2/WriteExampleElectron.cxx' to initialize the decorator and also include a handle int `::execute()`. Then it crashed when I built it so I edited the output stream in `IO/day2/AthenaPoolExample_WritexAODElectrons.py' according to `IO/day2/README.md`. But my code still crashed and I can't figure it out. :/  
